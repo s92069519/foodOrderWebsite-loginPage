@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --color1:#825230;
+    --color2:#F4E0D9;
+    --color3:#ffffff;
+    --font-1:'Lora', serif;
+}
+body{
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.box{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--color1);
+}
+.cart{
+    width: 750px;
+    height: 400px;
+    background-color:var(--color2);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    display: flex;
+    position: relative;
+}
+
+.account{
+    width: 50%;
+    height: 100%;
+    background-color: var(--color2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+}
+.signIn{
+    transform: translateX(0);
+    transition: 0.5s;
+}
+.signUp{
+   
+    transform: translateX(0);
+    transition: 0.5s;
+}
+
+.active-signIn{
+    transform: translateX(135%);
+    transition: .5s;
+}
+.active-signUp{
+    transform: translate(-135%);
+    transition: 0.5s;
+}
+
+h3{
+    font-family:var(--font-1);
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--color1);
+    margin-bottom: 10px;
+}
+input{
+    width:70%;
+    padding: 8px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.btn{
+    padding: 5px 20px;
+    font-size: 18px;
+    margin-top:5px;
+    font-weight: 800;
+    font-family: var(--font-1);
+    border: none;
+    border-radius: 5px;
+    color: var(--color3);
+    background-color: var(--color1); 
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: var(--color1);
+    font-size: 12px;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    position: absolute;
+    bottom: 40px;
+}
+.btn-link{
+    border: none;
+    background: none;
+    color: var(--color1);
+    font-weight:500;
+    cursor: pointer;
+    padding-left:5px;
+    font-family:'Noto Sans', sans-serif; 
+    
+}
+p{
+    font-size: 12px;
+    color: #252525;
+    position: absolute;
+    bottom: 20px;
+}
+
+.image{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width:600px) {
+    .cart{
+        width: 400px;
+        height: 580px;
+        background-color:var(--color2);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+    }
+    .image{
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+    }
+    h3{
+        margin-top: -30px;
+        font-size: 20px;
+    }
+    input{
+        width: 90%;
+        font-size: 13px;
+    }
+    .btn{
+        font-size: 15px;
+    }
+    
+    .signIn{
+    transform: translateY(0);
+    transition: 0.5s;
+    }
+    .signUp{
+   
+    transform: translateY(0);
+    transition: 0.5s;
+    }
+
+    .active-signIn{
+    transform: translateY(100%);
+    transition: .5s;
+    }
+    .active-signUp{
+    transform: translateY(-100%);
+    transition: 0.5s;
+    }
+
+    p{
+        font-size: 11px;
+        position: absolute;
+        bottom: 10px;
+    }
+    a{
+        bottom: 30px;
+    }
+
+    
+}
